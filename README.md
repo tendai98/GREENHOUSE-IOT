@@ -44,8 +44,8 @@ An HTTP server is set up on the ESP8266 to handle client requests.
 - **Request Handling:**
   - The server responds to the following endpoints:
     - `/id`: Returns the sensor's identification string.
-    - `/data`: Returns data from the pH sensor, temperature (fixed at 20°C for demonstration), and humidity (fixed at 65% for demonstration).
-    - `/reset`: Restarts the ESP8266 system.
+    - `/data`: Returns data from the pH sensor, temperature, and humidity.
+    - `/reset`: Restarts the ESP8266 MCU.
     - Any other requests result in a "Not Found" response.
 
 - **Server Initialization:**
