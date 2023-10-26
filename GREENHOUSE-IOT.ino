@@ -1,4 +1,5 @@
 #include "wifi.h"
+#include "dht.h"
 #include "http.h"
 
 void setup() {

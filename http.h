@@ -11,8 +11,13 @@
 ESP8266WebServer server(HTTP_PORT);
 String data;
 
+float tempValue = 20;
+float humidityValue = 65;
+
 void getData(){
-   data = String(readPhValue(SENSOR_GPIO))+":"+String(20)+":"+String(65);
+   tempValue = getTemperature();
+   humidityValue = getHumidity();
+   data = String(readPhValue(SENSOR_GPIO))+":"+String(tempValue)+":"+String(humidityValue);
    server.send(HTTP_OK_CODE, DEFAULT_MIME, data);  
 }
 
